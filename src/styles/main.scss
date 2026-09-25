@@ -1,0 +1,285 @@
+@use 'bootstrap/scss/bootstrap';
+
+:root {
+  background: #f8f9fa;
+}
+
+body {
+  min-width: 320px;
+  background: #f8f9fa;
+}
+
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.topbar {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.brand-mark {
+  display: inline-flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #0d6efd;
+  font-weight: 700;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.eyebrow,
+.kicker {
+  margin-bottom: 0.25rem;
+  color: #6c757d;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.status-chip {
+  color: #198754;
+  font-size: 0.85rem;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.35rem;
+  border-radius: 50%;
+  background: #198754;
+}
+
+.intro-grid,
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.intro-grid {
+  align-items: end;
+  padding: 3rem 0;
+}
+
+.intro-grid h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+}
+
+.intro-grid em {
+  color: #0d6efd;
+  font-style: normal;
+}
+
+.intro-copy {
+  max-width: 32rem;
+  color: #6c757d;
+}
+
+.metric-strip {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  text-align: center;
+}
+
+.metric-strip div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.metric-strip strong {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.metric-strip span {
+  color: #6c757d;
+  font-size: 0.75rem;
+}
+
+.panel {
+  padding: 1.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  background: #fff;
+}
+
+.form-panel-dark {
+  color: #212529;
+  background: #fff;
+  border-color: #dee2e6;
+}
+
+.section-label,
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-label h2,
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.section-label span {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.collection-panel {
+  margin-top: 1rem;
+}
+
+.count-badge {
+  padding: 0.35rem 0.6rem;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.search-wrap {
+  margin-bottom: 1rem;
+}
+
+.search-wrap > span {
+  display: none;
+}
+
+.list-item {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.record-title {
+  color: #212529;
+}
+
+.record-row .form-select {
+  width: 12rem;
+}
+
+.empty-state {
+  padding: 2rem 1rem;
+  color: #6c757d;
+  border: 1px dashed #adb5bd;
+  text-align: center;
+}
+
+.pagination-wrap {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 1rem;
+}
+
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  color: #6c757d;
+  font-size: 0.75rem;
+}
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog-custom {
+  width: min(100%, 32rem);
+  padding: 1.5rem;
+  border-radius: 0.375rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-icon {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #fff;
+  background: #0d6efd;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+.modal-icon-error {
+  background: #dc3545;
+}
+
+.modal-icon-success {
+  background: #198754;
+}
+
+.modal-dialog-custom p {
+  white-space: pre-line;
+}
+
+.toast-stack {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1040;
+  display: grid;
+  gap: 0.5rem;
+  width: min(24rem, calc(100% - 2rem));
+}
+
+.toast-custom {
+  padding: 1rem;
+  color: #fff;
+  background: #212529;
+  border-left: 0.25rem solid #0d6efd;
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    padding: 1rem 0.75rem;
+  }
+
+  .intro-grid,
+  .entry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-grid {
+    padding: 2rem 0;
+  }
+
+  .metric-strip {
+    justify-content: space-between;
+  }
+
+  .app-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .record-row .form-select {
+    width: 100%;
+  }
+}
